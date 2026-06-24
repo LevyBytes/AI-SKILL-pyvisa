@@ -1,0 +1,375 @@
+# Resources (part 10)
+
+> Pyvisa reference. Original prose; identifiers preserved verbatim.
+
+query_binary_values(message: str, datatype=`~typing.Literal['s', 'b', 'B', 'h', 'H', 'i', 'I', 'l', 'L', 'q', 'Q', 'f', 'd'] = 'f'`, is_big_endian=`bool = False`, container=`~typing.Type | ~typing.Callable[[~typing.Iterable], ~typing.Sequence] = <class 'list'>`, delay=`float | None = None`, header_fmt=`~typing.Literal['ieee', 'hp', 'rs', 'empty'] = 'ieee'`, expect_termination=`bool = True`, data_points=`int = 0`, chunk_size=`int | None = None`, monitoring_interface=`~pyvisa.resources.messagebased.SupportsUpdate | None = None`, length_before_block=`int | None = None`, raise_on_late_block=`bool = False`\*) → [Sequence](https://docs.python.org/3/library/typing.html#typing.Sequence)[[int](https://docs.python.org/3/library/functions.html#int) | [float](https://docs.python.org/3/library/functions.html#float)]
+
+Query the device and parse returned binary values into an iterable.
+
+Parameters:
+
+- **message** ([str](https://docs.python.org/3/library/stdtypes.html#str)) – The message to send.
+
+- **datatype** (BINARY_DATATYPES**, **optional) – Format string for one element; see the struct module. Default is ‘f’.
+
+- **is_big_endian** ([bool](https://docs.python.org/3/library/functions.html#bool), \*\*optional) – Indicates whether the data use big endian or little endian order. Defaults to False.
+
+- **container** (Union**[**Type**, **Callable**[**[**Iterable**]**, **Sequence**]**]**, **optional) – Container type for returned data. Accepted examples include list, tuple, np.ndarray, and similar containers. Default is list.
+
+- **delay** (Optional\*\*[[float](https://docs.python.org/3/library/functions.html#float)]**, **optional) – Wait time in seconds between the write and read steps. If None, uses self.query_delay.
+
+- **header_fmt** (util.BINARY_HEADERS**, **optional) – Header format that prefixes the data. Defaults to ‘ieee’.
+
+- **expect_termination** ([bool](https://docs.python.org/3/library/functions.html#bool), \*\*optional) – If False, the expected binary block length excludes the final termination character (the read termination). Defaults to True.
+
+- **data_points** ([int](https://docs.python.org/3/library/functions.html#int), \*\*optional) – Expected number of points in the block. Use this only when the instrument does not report the value itself; PyVISA converts it to bytes from the datatype. Defaults to 0.
+
+- **chunk_size** ([int](https://docs.python.org/3/library/functions.html#int), \*\*optional) – Chunk size used when reading from the device. Larger chunks can improve throughput for large data transfers.
+
+- **monitoring_interface** (SupportsUpdate Protocol**, **optional) – Progress monitor object with update() method accepting the bytes-read count. See the tqdm documentation (a progress bar package) for details.
+
+Returns:
+
+Data read from the device.
+
+Return type:
+
+Sequence[Union[[int](https://docs.python.org/3/library/functions.html#int), [float](https://docs.python.org/3/library/functions.html#float)]]
+
+query_delay*: [float](https://docs.python.org/3/library/functions.html#float)\*\* = 0.0*
+
+Seconds to sleep between the write and read phases of a query.
+
+read(termination: [str](https://docs.python.org/3/library/stdtypes.html#str) | [None](https://docs.python.org/3/library/constants.html#None) = None, encoding: [str](https://docs.python.org/3/library/stdtypes.html#str) | [None](https://docs.python.org/3/library/constants.html#None) = None) → [str](https://docs.python.org/3/library/stdtypes.html#str)
+
+Read a string from the device.
+
+Reading ends when the device stops transmitting (for example by setting the relevant bus lines) or when the termination character sequence is found. Only the final character of the termination sequence actually stops the read; the complete sequence is still checked against the end of the read string message, and a warning is emitted if it differs.
+
+Parameters:
+
+- **termination** (Optional\*\*[[str](https://docs.python.org/3/library/stdtypes.html#str)]**, **optional) – Character termination override. If None, read_termination supplies the value. Defaults to None.
+
+- **encoding** (Optional\*\*[[str](https://docs.python.org/3/library/stdtypes.html#str)]**, **optional) – Encoding override for decoding bytes to str. If None, encoding supplies the value. Defaults to None.
+
+Returns:
+
+Message read from the instrument and decoded.
+
+Return type:
+
+[str](https://docs.python.org/3/library/stdtypes.html#str)
+
+read_ascii_values(converter=`~typing.Literal['s', 'b', 'c', 'd', 'o', 'x', 'X', 'e', 'E', 'f', 'F', 'g', 'G'] | ~typing.Callable[[str], ~typing.Any] = 'f'`, separator=`str | ~typing.Callable[[str], ~typing.Iterable[str]] = ','`, container=`~typing.Type | ~typing.Callable[[~typing.Iterable], ~typing.Sequence] = <class 'list'>`) → [Sequence](https://docs.python.org/3/library/typing.html#typing.Sequence)
+
+Read ASCII values from the device and return them as an iterable.
+
+Parameters:
+
+**converter** (ASCII_CONVERTER**, **optional) – Str format of function to convert each value. Default to “f”.
+
+separatorUnion[str, Callable[[str], Iterable[str]]]
+
+Use a str or callable to divide the returned data into elements. With a str, data.split(separator) is used. Default is “,”.
+
+containerUnion[Type, Callable[[Iterable], Sequence]], optional
+
+Container type for returned data. Accepted examples include list, tuple, np.ndarray, and similar containers. Default is list.
+
+Returns:
+
+Parsed data.
+
+Return type:
+
+Sequence
+
+read_binary_values(datatype=`~typing.Literal['s', 'b', 'B', 'h', 'H', 'i', 'I', 'l', 'L', 'q', 'Q', 'f', 'd'] = 'f'`, is_big_endian=`bool = False`, container=`~typing.Type | ~typing.Callable[[~typing.Iterable], ~typing.Sequence] = <class 'list'>`, header_fmt=`~typing.Literal['ieee', 'hp', 'rs', 'empty'] = 'ieee'`, expect_termination=`bool = True`, data_points=`int = -1`, chunk_size=`int | None = None`, monitoring_interface=`~pyvisa.resources.messagebased.SupportsUpdate | None = None`, length_before_block=`int | None = None`, raise_on_late_block=`bool = False`) → [Sequence](https://docs.python.org/3/library/typing.html#typing.Sequence)[[int](https://docs.python.org/3/library/functions.html#int) | [float](https://docs.python.org/3/library/functions.html#float)]
+
+Read binary values from the device and return them as an iterable.
+
+Parameters:
+
+- **datatype** (BINARY_DATATYPES**, **optional) – Format string for one element; see the struct module. Default is ‘f’.
+
+- **is_big_endian** ([bool](https://docs.python.org/3/library/functions.html#bool), \*\*optional) – Indicates whether the data use big endian or little endian order. Defaults to False.
+
+- **container** (Union**[**Type**, **Callable**[**[**Iterable**]**, **Sequence**]**]**, **optional) – Container type for returned data. Accepted examples include list, tuple, np.ndarray, and similar containers. Default is list.
+
+- **header_fmt** (util.BINARY_HEADERS**, **optional) – Header format that prefixes the data. Defaults to ‘ieee’.
+
+- **expect_termination** ([bool](https://docs.python.org/3/library/functions.html#bool), \*\*optional) – If False, the expected binary block length excludes the final termination character (the read termination). Defaults to True.
+
+- **data_points** ([int](https://docs.python.org/3/library/functions.html#int), \*\*optional) – Expected number of points in the block. Use this only when the instrument does not report the value itself; PyVISA converts it to bytes from the datatype. Defaults to 0.
+
+- **chunk_size** ([int](https://docs.python.org/3/library/functions.html#int), \*\*optional) – Chunk size used when reading from the device. Larger chunks can improve throughput for large data transfers.
+
+- **monitoring_interface** (SupportsUpdate Protocol**, **optional) – Progress monitor object with update() method accepting the bytes-read count. See the tqdm documentation (a progress bar package) for details.
+
+Returns:
+
+Data read from the device.
+
+Return type:
+
+Sequence[Union[[int](https://docs.python.org/3/library/functions.html#int), [float](https://docs.python.org/3/library/functions.html#float)]]
+
+read_bytes(count: [int](https://docs.python.org/3/library/functions.html#int), chunk_size: [int](https://docs.python.org/3/library/functions.html#int) | [None](https://docs.python.org/3/library/constants.html#None) = None, break_on_termchar: [bool](https://docs.python.org/3/library/functions.html#bool) = False, monitoring_interface: SupportsUpdate | [None](https://docs.python.org/3/library/constants.html#None) = None) → [bytes](https://docs.python.org/3/library/stdtypes.html#bytes)
+
+Read a certain number of bytes from the instrument.
+
+Parameters:
+
+- **count** ([int](https://docs.python.org/3/library/functions.html#int)) – Number of bytes to read from the instrument.
+
+- **chunk_size** (Optional\*\*[[int](https://docs.python.org/3/library/functions.html#int)]**, **optional) – Chunk size used for reading. If count > chunk_size, PyVISA performs multiple low-level operations. Defaults to None, meaning the resource-wide setting is used.
+
+- **break_on_termchar** ([bool](https://docs.python.org/3/library/functions.html#bool), \*\*optional) – Stop reading when either a termination character appears or the message ends. Defaults to False.
+
+- **monitoring_interface** (SupportsUpdate Protocol**, **optional) – Progress monitor object with update() method accepting the bytes-read count. See the tqdm documentation (a progress bar package) for details.
+
+Returns:
+
+Bytes read from the instrument.
+
+Return type:
+
+[bytes](https://docs.python.org/3/library/stdtypes.html#bytes)
+
+read_raw(size: [int](https://docs.python.org/3/library/functions.html#int) | [None](https://docs.python.org/3/library/constants.html#None) = None) → [bytes](https://docs.python.org/3/library/stdtypes.html#bytes)
+
+Read the unmodified string sent from the instrument to the computer.
+
+In contrast to read(), no termination characters are stripped.
+
+Parameters:
+
+**size** (Optional\*\*[[int](https://docs.python.org/3/library/functions.html#int)]**, **optional) – Chunk size used for reading. Defaults to None, meaning the resource-wide setting is used.
+
+Returns:
+
+Bytes read from the instrument.
+
+Return type:
+
+[bytes](https://docs.python.org/3/library/stdtypes.html#bytes)
+
+read_stb() → [int](https://docs.python.org/3/library/functions.html#int)
+
+Service request status register.
+
+*property *read_termination*: [str](https://docs.python.org/3/library/stdtypes.html#str) | [None](https://docs.python.org/3/library/constants.html#None)*
+
+Read termination character.
+
+read_termination_context(new_termination: [str](https://docs.python.org/3/library/stdtypes.html#str) | [None](https://docs.python.org/3/library/constants.html#None)) → [Iterator](https://docs.python.org/3/library/typing.html#typing.Iterator)
+
+*classmethod *register(interface_type: [InterfaceType](https://pyvisa.readthedocs.io/en/latest/api/constants.html#pyvisa.constants.InterfaceType), resource_class: [str](https://docs.python.org/3/library/stdtypes.html#str)) → [Callable](https://docs.python.org/3/library/typing.html#typing.Callable)[[[Type](https://docs.python.org/3/library/typing.html#typing.Type)[T]], [Type](https://docs.python.org/3/library/typing.html#typing.Type)[T]]
+
+Create a decorator to register a class.
+
+The class is associated to an interface type, resource class pair.
+
+Parameters:
+
+- **interface_type** ([constants.InterfaceType](https://pyvisa.readthedocs.io/en/latest/api/constants.html#pyvisa.constants.InterfaceType)) – Interface type for which to register a wrapper class.
+
+- **resource_class** ([str](https://docs.python.org/3/library/stdtypes.html#str)) – Resource class for which to register a wrapper class.
+
+Returns:
+
+Decorator that registers the class and raises TypeError when required VISA attributes are absent.
+
+Return type:
+
+Callable[[Type[T]], Type[T]]
+
+resource_class*: Attribute[[str](https://docs.python.org/3/library/stdtypes.html#str)]*
+
+Resource class (for example, “INSTR”) as defined by the canonical resource name.
+
+*property *resource_info*: [ResourceInfo](https://pyvisa.readthedocs.io/en/latest/api/resourcemanager.html#pyvisa.highlevel.ResourceInfo)*
+
+Get the extended information of this resource.
+
+resource_manager*: [highlevel.ResourceManager](https://pyvisa.readthedocs.io/en/latest/api/resourcemanager.html#pyvisa.highlevel.ResourceManager)*
+
+Reference to the resource manager used by this resource
+
+resource_manufacturer_name*: Attribute[[str](https://docs.python.org/3/library/stdtypes.html#str)]*
+
+Manufacturer name of the vendor that implemented the VISA library.
+
+resource_name*: Attribute[[str](https://docs.python.org/3/library/stdtypes.html#str)]*
+
+Unique identifier for a resource compliant with the address structure.
+
+send_end*: Attribute[[bool](https://docs.python.org/3/library/functions.html#bool)]*
+
+Whether to assert END while transferring the buffer’s final byte.
+
+serial_number*: Attribute[[str](https://docs.python.org/3/library/stdtypes.html#str)]*
+
+USB serial number of this device.
+
+*property *session*: VISASession*
+
+Resource session handle.
+
+Raises:
+
+**errors.InvalidSession** – Raised if session is closed.
+
+set_visa_attribute(name: ResourceAttribute, state: [Any](https://docs.python.org/3/library/typing.html#typing.Any)) → [StatusCode](https://pyvisa.readthedocs.io/en/latest/api/constants.html#pyvisa.constants.StatusCode)
+
+Set the state of an attribute.
+
+For frequently used attributes, prefer the dedicated descriptor because it checks values and performs automatic conversion.
+
+Parameters:
+
+- **name** (constants.ResourceAttribute) – Attribute for which the state is to be modified.
+
+- **state** (Any) – Attribute state to set on the specified object.
+
+Returns:
+
+Return value of the library call.
+
+Return type:
+
+[constants.StatusCode](https://pyvisa.readthedocs.io/en/latest/api/constants.html#pyvisa.constants.StatusCode)
+
+spec_version*: Attribute[[int](https://docs.python.org/3/library/functions.html#int)]*
+
+Version of the VISA specification to which the implementation is compliant.
+
+*property *stb*: [int](https://docs.python.org/3/library/functions.html#int)*
+
+Service request status register.
+
+timeout*: Attribute[[float](https://docs.python.org/3/library/functions.html#float)]*
+
+Timeout in milliseconds for all resource I/O operations.
+
+uninstall_handler(event_type: EventType, handler: [Callable](https://docs.python.org/3/library/typing.html#typing.Callable)[[VISASession, EventType, VISAEventContext, [Any](https://docs.python.org/3/library/typing.html#typing.Any)], [None](https://docs.python.org/3/library/constants.html#None)], user_handle=None) → [None](https://docs.python.org/3/library/constants.html#None)
+
+Uninstalls handlers for events in this resource.
+
+Parameters:
+
+- **event_type** (constants.EventType) – Logical event identifier.
+
+- **handler** (VISAHandler) – Handler function to be uninstalled by a client application.
+
+- **user_handle** (Any) – The user handle returned by install_handler.
+
+  unlock() → [None](https://docs.python.org/3/library/constants.html#None)
+
+Relinquishes a lock for the specified resource.
+
+usb_protocol*: Attribute[[int](https://docs.python.org/3/library/functions.html#int)]*
+
+USB protocol used by this USB interface.
+
+`visa_attributes_classes*: ClassVar[Set[Type[attributes.Attribute]]]** = {<class 'pyvisa.attributes.AttrVI_ATTR_4882_COMPLIANT'>, <class 'pyvisa.attributes.AttrVI_ATTR_DMA_ALLOW_EN'>, <class 'pyvisa.attributes.AttrVI_ATTR_FILE_APPEND_EN'>, <class 'pyvisa.attributes.AttrVI_ATTR_INTF_INST_NAME'>, <class 'pyvisa.attributes.AttrVI_ATTR_INTF_NUM'>, <class 'pyvisa.attributes.AttrVI_ATTR_INTF_TYPE'>, <class 'pyvisa.attributes.AttrVI_ATTR_IO_PROT'>, <class 'pyvisa.attributes.AttrVI_ATTR_MANF_ID'>, <class 'pyvisa.attributes.AttrVI_ATTR_MANF_NAME'>, <class 'pyvisa.attributes.AttrVI_ATTR_MAX_QUEUE_LENGTH'>, <class 'pyvisa.attributes.AttrVI_ATTR_MODEL_CODE'>, <class 'pyvisa.attributes.AttrVI_ATTR_MODEL_NAME'>, <class 'pyvisa.attributes.AttrVI_ATTR_RD_BUF_OPER_MODE'>, <class 'pyvisa.attributes.AttrVI_ATTR_RD_BUF_SIZE'>, <class 'pyvisa.attributes.AttrVI_ATTR_RM_SESSION'>, <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_CLASS'>, <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_IMPL_VERSION'>, <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_LOCK_STATE'>, <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_MANF_ID'>, <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_MANF_NAME'>, <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_NAME'>, <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_SPEC_VERSION'>, <class 'pyvisa.attributes.AttrVI_ATTR_SEND_END_EN'>, <class 'pyvisa.attributes.AttrVI_ATTR_SUPPRESS_END_EN'>, <class 'pyvisa.attributes.AttrVI_ATTR_TERMCHAR'>, <class 'pyvisa.attributes.AttrVI_ATTR_TERMCHAR_EN'>, <class 'pyvisa.attributes.AttrVI_ATTR_TMO_VALUE'>, <class 'pyvisa.attributes.AttrVI_ATTR_USB_INTFC_NUM'>, <class 'pyvisa.attributes.AttrVI_ATTR_USB_MAX_INTR_SIZE'>, <class 'pyvisa.attributes.AttrVI_ATTR_USB_PROTOCOL'>, <class 'pyvisa.attributes.AttrVI_ATTR_USB_SERIAL_NUM'>, <class 'pyvisa.attributes.AttrVI_ATTR_USER_DATA'>, <class 'pyvisa.attributes.AttrVI_ATTR_WR_BUF_OPER_MODE'>, <class 'pyvisa.attributes.AttrVI_ATTR_WR_BUF_SIZE'>}*`
+
+VISA attribute descriptor classes for inspecting supported attributes and allowed values. Commonly used attributes are usually exposed directly on the resource.
+
+visalib*: [VisaLibraryBase](https://pyvisa.readthedocs.io/en/latest/api/visalibrarybase.html#pyvisa.highlevel.VisaLibraryBase)*
+
+Will be present when used as a mixin with Resource
+
+wait_on_event(in_event_type: EventType, timeout: [int](https://docs.python.org/3/library/functions.html#int), capture_timeout: [bool](https://docs.python.org/3/library/functions.html#bool) = False) → WaitResponse
+
+Waits for an occurrence of the specified event in this resource.
+
+in_event_typeconstants.EventType
+
+Logical identifier of the event(s) to wait for.
+
+timeoutint
+
+Time in milliseconds that the resource waits for the requested event before returning a time elapsed error. None waits forever if necessary.
+
+capture_timeoutbool, optional
+
+When True, return a WaitResponse with timed_out=True instead of raising VisaIOError(VI_ERROR_TMO).
+
+Returns:
+
+Object that contains event_type, context and ret value.
+
+Return type:
+
+WaitResponse
+
+wrap_handler(callable: [Callable](https://docs.python.org/3/library/typing.html#typing.Callable)[[Resource, Event, [Any](https://docs.python.org/3/library/typing.html#typing.Any)], [None](https://docs.python.org/3/library/constants.html#None)]) → [Callable](https://docs.python.org/3/library/typing.html#typing.Callable)[[VISASession, EventType, VISAEventContext, [Any](https://docs.python.org/3/library/typing.html#typing.Any)], [None](https://docs.python.org/3/library/constants.html#None)]
+
+Wrap an event handler to provide the signature expected by VISA.
+
+The handler must match this signature: handler(resource: Resource, event: Event, user_handle: Any) -> None.
+
+Use the wrapped handler only for events from the same resource that created the wrapper.
+
+write(message: [str](https://docs.python.org/3/library/stdtypes.html#str), termination: [str](https://docs.python.org/3/library/stdtypes.html#str) | [None](https://docs.python.org/3/library/constants.html#None) = None, encoding: [str](https://docs.python.org/3/library/stdtypes.html#str) | [None](https://docs.python.org/3/library/constants.html#None) = None) → [int](https://docs.python.org/3/library/functions.html#int)
+
+Write a string message to the device.
+
+The write_termination is always appended to it.
+
+Parameters:
+
+- **message** ([str](https://docs.python.org/3/library/stdtypes.html#str)) – The message to be sent.
+
+- **termination** (Optional\*\*[[str](https://docs.python.org/3/library/stdtypes.html#str)]**, **optional) – Character termination override. If None, write_termination supplies the value. Defaults to None.
+
+- **encoding** (Optional\*\*[[str](https://docs.python.org/3/library/stdtypes.html#str)]**, **optional) – Encoding override for converting str to bytes. If None, encoding supplies the value. Defaults to None.
+
+Returns:
+
+Number of bytes written.
+
+Return type:
+
+[int](https://docs.python.org/3/library/functions.html#int)
+
+`write_ascii_values`(message: [str](https://docs.python.org/3/library/stdtypes.html#str), values: [Iterable](https://docs.python.org/3/library/typing.html#typing.Iterable)[[Any](https://docs.python.org/3/library/typing.html#typing.Any)], converter: [Literal](https://docs.python.org/3/library/typing.html#typing.Literal)`['s', 'b', 'c', 'd', 'o', 'x', 'X', 'e', 'E', 'f', 'F', 'g', 'G'] = 'f'` | [Callable](https://docs.python.org/3/library/typing.html#typing.Callable)[[[str](https://docs.python.org/3/library/stdtypes.html#str)], [Any](https://docs.python.org/3/library/typing.html#typing.Any)], separator: [str](https://docs.python.org/3/library/stdtypes.html#str) | [Callable](https://docs.python.org/3/library/typing.html#typing.Callable)[[[Iterable](https://docs.python.org/3/library/typing.html#typing.Iterable)[[str](https://docs.python.org/3/library/stdtypes.html#str)]], [str](https://docs.python.org/3/library/stdtypes.html#str)] = ','\_, termination: [str](https://docs.python.org/3/library/stdtypes.html#str) | [None](https://docs.python.org/3/library/constants.html#None) = None, encoding: [str](https://docs.python.org/3/library/stdtypes.html#str) | [None](https://docs.python.org/3/library/constants.html#None) = None)
+
+Write a string message and append ASCII-formatted values to the device.
+
+The write_termination is always appended to it.
+
+Parameters:
+
+- **message** ([str](https://docs.python.org/3/library/stdtypes.html#str)) – Header of the message to be sent.
+
+- **values** (Sequence**[**Any\*\*]) – Data to be written to the device.
+
+- **converter** (Union\*\*[[str](https://docs.python.org/3/library/stdtypes.html#str), **Callable**[**[**Any**]**, \_[str](https://docs.python.org/3/library/stdtypes.html#str)]**]**, \*\*optional) – str formatting codes or a callable for converting each value. Defaults to “f”.
+
+- **separator** (Union\*\*[[str](https://docs.python.org/3/library/stdtypes.html#str), **Callable**[**[**Iterable\*\*[[str](https://docs.python.org/3/library/stdtypes.html#str)]**]**, \_[str](https://docs.python.org/3/library/stdtypes.html#str)]**]**, \*\*optional) – str or callable that joins the values into one str. With a str, separator.join(values) is used. Defaults to ‘,’
+
+- **termination** (Optional\*\*[[str](https://docs.python.org/3/library/stdtypes.html#str)]**, **optional) – Character termination override. If None, write_termination supplies the value. Defaults to None.
+
+- **encoding** (Optional\*\*[[str](https://docs.python.org/3/library/stdtypes.html#str)]**, **optional) – Encoding override for converting str to bytes. If None, encoding supplies the value. Defaults to None.
+
+Returns:
+
+Number of bytes written.
+
+Return type:
+
+[int](https://docs.python.org/3/library/functions.html#int)
+
+`write_binary_values`(message: [str](https://docs.python.org/3/library/stdtypes.html#str), values: [Sequence](https://docs.python.org/3/library/typing.html#typing.Sequence)[[Any](https://docs.python.org/3/library/typing.html#typing.Any)], datatype: [Literal](https://docs.python.org/3/library/typing.html#typing.Literal)`['s', 'b', 'B', 'h', 'H', 'i', 'I', 'l', 'L', 'q', 'Q', 'f', 'd'] = 'f'`_, is_big_endian: [bool](https://docs.python.org/3/library/functions.html#bool) = False, termination: [str](https://docs.python.org/3/library/stdtypes.html#str) | [None](https://docs.python.org/3/library/constants.html#None) = None, encoding: [str](https://docs.python.org/3/library/stdtypes.html#str) | [None](https://docs.python.org/3/library/constants.html#None) = None, header_fmt: [Literal](https://docs.python.org/3/library/typing.html#typing.Literal)`['ieee', 'hp', 'rs', 'empty'] = 'ieee'`_)
+
+Write a string message and append binary-formatted values to the device.
+
+The write_termination is always appended to it.
+
+Parameters:
+
+- **message** ([str](https://docs.python.org/3/library/stdtypes.html#str)) – The header of the message to be sent.
+
+-
