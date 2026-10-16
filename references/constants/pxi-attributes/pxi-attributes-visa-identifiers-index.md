@@ -1,0 +1,68 @@
+# PXI attributes VISA numeric identifiers
+
+Open when locating PXI attributes VISA numeric identifiers methods, values or declarations.
+
+- [pyvisa.constants.VI_ATTR_PXI_DEV_NUM](vi-attr-pxi-dev-num-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_DEV_NUM.
+- [pyvisa.constants.VI_ATTR_PXI_FUNC_NUM](vi-attr-pxi-func-num-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_FUNC_NUM.
+- [pyvisa.constants.VI_ATTR_PXI_BUS_NUM](vi-attr-pxi-bus-num-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_BUS_NUM.
+- [pyvisa.constants.VI_ATTR_PXI_CHASSIS](vi-attr-pxi-chassis-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_CHASSIS.
+- [pyvisa.constants.VI_ATTR_PXI_SLOTPATH](vi-attr-pxi-slotpath-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_SLOTPATH.
+- [pyvisa.constants.VI_ATTR_PXI_SLOT_LBUS_LEFT](vi-attr-pxi-slot-lbus-left-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_SLOT_LBUS_LEFT.
+- [pyvisa.constants.VI_ATTR_PXI_SLOT_LBUS_RIGHT](vi-attr-pxi-slot-lbus-right-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_SLOT_LBUS_RIGHT.
+- [pyvisa.constants.VI_ATTR_PXI_TRIG_BUS](vi-attr-pxi-trig-bus-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_TRIG_BUS.
+- [pyvisa.constants.VI_ATTR_PXI_STAR_TRIG_BUS](vi-attr-pxi-star-trig-bus-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_STAR_TRIG_BUS.
+- [pyvisa.constants.VI_ATTR_PXI_STAR_TRIG_LINE](vi-attr-pxi-star-trig-line-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_STAR_TRIG_LINE.
+- [pyvisa.constants.VI_ATTR_PXI_IS_EXPRESS](vi-attr-pxi-is-express-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_IS_EXPRESS.
+- [pyvisa.constants.VI_ATTR_PXI_SLOT_LWIDTH](vi-attr-pxi-slot-lwidth-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_SLOT_LWIDTH.
+- [pyvisa.constants.VI_ATTR_PXI_MAX_LWIDTH](vi-attr-pxi-max-lwidth-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MAX_LWIDTH.
+- [pyvisa.constants.VI_ATTR_PXI_ACTUAL_LWIDTH](vi-attr-pxi-actual-lwidth-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_ACTUAL_LWIDTH.
+- [pyvisa.constants.VI_ATTR_PXI_DSTAR_BUS](vi-attr-pxi-dstar-bus-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_DSTAR_BUS.
+- [pyvisa.constants.VI_ATTR_PXI_DSTAR_SET](vi-attr-pxi-dstar-set-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_DSTAR_SET.
+- [pyvisa.constants.VI_ATTR_PXI_SRC_TRIG_BUS](vi-attr-pxi-src-trig-bus-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_SRC_TRIG_BUS.
+- [pyvisa.constants.VI_ATTR_PXI_DEST_TRIG_BUS](vi-attr-pxi-dest-trig-bus-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_DEST_TRIG_BUS.
+- [pyvisa.constants.VI_ATTR_PXI_RECV_INTR_SEQ](vi-attr-pxi-recv-intr-seq-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_RECV_INTR_SEQ.
+- [pyvisa.constants.VI_ATTR_PXI_RECV_INTR_DATA](vi-attr-pxi-recv-intr-data-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_RECV_INTR_DATA.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_TYPE_BAR0](vi-attr-pxi-mem-type-bar0-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_TYPE_BAR0.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_TYPE_BAR1](vi-attr-pxi-mem-type-bar1-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_TYPE_BAR1.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_TYPE_BAR2](vi-attr-pxi-mem-type-bar2-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_TYPE_BAR2.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_TYPE_BAR3](vi-attr-pxi-mem-type-bar3-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_TYPE_BAR3.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_TYPE_BAR4](vi-attr-pxi-mem-type-bar4-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_TYPE_BAR4.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_TYPE_BAR5](vi-attr-pxi-mem-type-bar5-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_TYPE_BAR5.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR0_32](vi-attr-pxi-mem-base-bar0-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR0_32.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR1_32](vi-attr-pxi-mem-base-bar1-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR1_32.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR2_32](vi-attr-pxi-mem-base-bar2-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR2_32.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR3_32](vi-attr-pxi-mem-base-bar3-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR3_32.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR4_32](vi-attr-pxi-mem-base-bar4-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR4_32.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR5_32](vi-attr-pxi-mem-base-bar5-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR5_32.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR0_32](vi-attr-pxi-mem-size-bar0-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR0_32.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR1_32](vi-attr-pxi-mem-size-bar1-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR1_32.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR2_32](vi-attr-pxi-mem-size-bar2-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR2_32.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR3_32](vi-attr-pxi-mem-size-bar3-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR3_32.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR4_32](vi-attr-pxi-mem-size-bar4-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR4_32.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR5_32](vi-attr-pxi-mem-size-bar5-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR5_32.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR0_64](vi-attr-pxi-mem-base-bar0-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR0_64.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR1_64](vi-attr-pxi-mem-base-bar1-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR1_64.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR2_64](vi-attr-pxi-mem-base-bar2-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR2_64.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR3_64](vi-attr-pxi-mem-base-bar3-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR3_64.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR4_64](vi-attr-pxi-mem-base-bar4-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR4_64.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR5_64](vi-attr-pxi-mem-base-bar5-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR5_64.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR0_64](vi-attr-pxi-mem-size-bar0-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR0_64.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR1_64](vi-attr-pxi-mem-size-bar1-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR1_64.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR2_64](vi-attr-pxi-mem-size-bar2-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR2_64.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR3_64](vi-attr-pxi-mem-size-bar3-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR3_64.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR4_64](vi-attr-pxi-mem-size-bar4-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR4_64.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR5_64](vi-attr-pxi-mem-size-bar5-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR5_64.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR0](vi-attr-pxi-mem-base-bar0-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR0.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR1](vi-attr-pxi-mem-base-bar1-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR1.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR2](vi-attr-pxi-mem-base-bar2-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR2.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR3](vi-attr-pxi-mem-base-bar3-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR3.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR4](vi-attr-pxi-mem-base-bar4-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR4.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR5](vi-attr-pxi-mem-base-bar5-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_BASE_BAR5.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR0](vi-attr-pxi-mem-size-bar0-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR0.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR1](vi-attr-pxi-mem-size-bar1-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR1.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR2](vi-attr-pxi-mem-size-bar2-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR2.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR3](vi-attr-pxi-mem-size-bar3-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR3.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR4](vi-attr-pxi-mem-size-bar4-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR4.
+- [pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR5](vi-attr-pxi-mem-size-bar5-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_PXI_MEM_SIZE_BAR5.
+
+[Reference Language Selection](../../languages.md) — Open when you need a language version of this skill's references other than English.

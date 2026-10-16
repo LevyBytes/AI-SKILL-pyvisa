@@ -1,37 +1,25 @@
 ---
 name: pyvisa
-description: Use when working with PyVISA - the Python library for controlling measurement instruments over VISA (GPIB, USB, serial/RS-232, TCPIP/Ethernet): ResourceManager, listing/opening resources, read/write/query, VISA attributes and constants, termination characters, timeouts, event handling, the visa shell, backends (pyvisa-py, NI-VISA), and the high-level/low-level API. import pyvisa. Not for the Python stdlib or other instrument-control libraries.
+description: "Use when working with PyVISA instrument control over VISA: ResourceManager, GPIB, USB, serial/RS-232, TCPIP/Ethernet, resource classes, read/write/query, ASCII/binary transfers, timeouts and termination, attributes/constants/status codes, events, the VISA shell, NI-VISA/pyvisa-py backends, low-level API or bundled implementation excerpts. Not for unrelated instrument libraries or general Python."
+metadata:
+  last-updated: "2026-10-16"
 ---
 
-# PyVISA Reference
+# Context Router
 
-Original-prose reference for PyVISA, split into one focused file per subject across 54 reference files.
-Identifiers (API/type/function names, flags, paths, enums, numbers) are preserved verbatim.
+- [Usage, installation, backends and migration](references/guides/guides-index.md) — Open when configuring PyVISA, communicating with instruments, handling events, using the shell, selecting a backend or troubleshooting migration/installations.
+- [Constants API](references/constants/constants-api-index.md) — Open when checking Constants API signatures, attributes, defaults, returned status codes and protocol constraints.
+- [ResourceManager and resource information API](references/resource-manager/resource-manager-and-resource-information-api-index.md) — Open when checking ResourceManager and resource information API signatures, attributes, defaults, returned status codes and protocol constraints.
+- [VisaLibraryBase low-level API](references/visa-library/visa-library-base-low-level-api-index.md) — Open when checking VisaLibraryBase low-level API signatures, attributes, defaults, returned status codes and protocol constraints.
+- [Resource class APIs](references/resources/resource-class-apis-api-index.md) — Open when checking Resource class APIs signatures, attributes, defaults, returned status codes and protocol constraints.
+- [Implementation excerpts](references/implementation-modules.json) — Open when inspecting bundled PyVISA implementation records for constants, library wrappers or transport-specific resources.
 
-## When to use this
+Open the [reference index](references/INDEX.md) or [topic catalog](references/topics.json) when browsing the bundled subjects.
 
-Use this skill when the task involves the PyVISA library for instrument control over VISA - opening a ResourceManager, listing/opening resources (GPIB/USB/serial/TCPIP), read/write/query, VISA attributes and constants, termination characters, timeouts, event handling, the visa shell, choosing a backend (pyvisa-py vs NI-VISA), and the high-level/low-level API.
+# Language Translations
 
-## Workflow
+[Reference Language Selection](references/languages.md)
 
-1. Open `references/INDEX.md` (or `references/topics.json`) and pick the one file that matches.
-2. Read only that file; open another only if the task spans subjects. Grep across files when needed: `rg -n "PATTERN" references/*.md`.
-3. Treat every identifier as an exact reference fact — never invent or paraphrase.
+# Context For Open Source
 
-## Gotchas
-
-Recurring failure modes and what to do instead live in the sibling [GOTCHA.md](GOTCHA.md).
-
-## References
-
-All depth lives in `references/` — start at `references/INDEX.md`, metadata in `references/topics.json`. One subject per file.
-
-## Source
-
-Adapted from the upstream PyVISA documentation into original prose for local reference. Identifiers remain verbatim. Upstream: https://pyvisa.readthedocs.io/en/latest/
-
-## Verification
-
-```powershell
-python D:\dev\SKILLS\skills\skill-drafting\scripts\validate_skill_package.py D:\dev\SKILLS\skills\pyvisa
-```
+Skill reference documentation is interpreted content for use in open source projects. Check against [official documentation sources](https://pyvisa.readthedocs.io/en/latest/) when dealing with defects or issues that may come up from interpreting this skill's references.

@@ -1,0 +1,85 @@
+# Complete backend level-2 implementation signature list
+Context: PyVISA advanced; retain the exact signature, parameter defaults, return/status contract and backend/protocol qualifiers.
+[Source context](backend-development-index.md) / [Backend skeleton, required API and per-session status handling](backend-implementation-contract.md)
+
+Complete bundled level-2 method signatures, checked against official revision 843d62a50. These are API declarations; a backend must supply each selected method's behavior. `self` denotes the backend instance.
+
+- `read_memory(self, session: VISASession, space: constants.AddressSpace, offset: int, width: Union[Literal[8, 16, 32, 64], constants.DataWidth], extended: bool=False) -> Tuple[int, StatusCode]`
+- `write_memory(self, session: VISASession, space: constants.AddressSpace, offset: int, data: int, width: Union[Literal[8, 16, 32, 64], constants.DataWidth], extended: bool=False) -> StatusCode`
+- `move_in(self, session: VISASession, space: constants.AddressSpace, offset: int, length: int, width: Union[Literal[8, 16, 32, 64], constants.DataWidth], extended: bool=False) -> Tuple[List[int], StatusCode]`
+- `move_out(self, session: VISASession, space: constants.AddressSpace, offset: int, length: int, data: Iterable[int], width: Union[Literal[8, 16, 32, 64], constants.DataWidth], extended: bool=False) -> StatusCode`
+- `peek(self, session: VISASession, address: VISAMemoryAddress, width: Union[Literal[8, 16, 32, 64], constants.DataWidth]) -> Tuple[int, StatusCode]`
+- `poke(self, session: VISASession, address: VISAMemoryAddress, width: Union[Literal[8, 16, 32, 64], constants.DataWidth], data: int) -> StatusCode`
+- `assert_interrupt_signal(self, session: VISASession, mode: constants.AssertSignalInterrupt, status_id: int) -> StatusCode`
+- `assert_trigger(self, session: VISASession, protocol: constants.TriggerProtocol) -> StatusCode`
+- `assert_utility_signal(self, session: VISASession, line: constants.UtilityBusSignal) -> StatusCode`
+- `buffer_read(self, session: VISASession, count: int) -> Tuple[bytes, StatusCode]`
+- `buffer_write(self, session: VISASession, data: bytes) -> Tuple[int, StatusCode]`
+- `clear(self, session: VISASession) -> StatusCode`
+- `close(self, session: Union[VISASession, VISAEventContext, VISARMSession]) -> StatusCode`
+- `disable_event(self, session: VISASession, event_type: constants.EventType, mechanism: constants.EventMechanism) -> StatusCode`
+- `discard_events(self, session: VISASession, event_type: constants.EventType, mechanism: constants.EventMechanism) -> StatusCode`
+- `enable_event(self, session: VISASession, event_type: constants.EventType, mechanism: constants.EventMechanism, context: None=None) -> StatusCode`
+- `flush(self, session: VISASession, mask: constants.BufferOperation) -> StatusCode`
+- `get_attribute(self, session: Union[VISASession, VISAEventContext, VISARMSession], attribute: Union[constants.ResourceAttribute, constants.EventAttribute]) -> Tuple[Any, StatusCode]`
+- `gpib_command(self, session: VISASession, data: bytes) -> Tuple[int, StatusCode]`
+- `gpib_control_atn(self, session: VISASession, mode: constants.ATNLineOperation) -> StatusCode`
+- `gpib_control_ren(self, session: VISASession, mode: constants.RENLineOperation) -> StatusCode`
+- `gpib_pass_control(self, session: VISASession, primary_address: int, secondary_address: int) -> StatusCode`
+- `gpib_send_ifc(self, session: VISASession) -> StatusCode`
+- `in_8(self, session: VISASession, space: constants.AddressSpace, offset: int, extended: bool=False) -> Tuple[int, StatusCode]`
+- `in_16(self, session: VISASession, space: constants.AddressSpace, offset: int, extended: bool=False) -> Tuple[int, StatusCode]`
+- `in_32(self, session: VISASession, space: constants.AddressSpace, offset: int, extended: bool=False) -> Tuple[int, StatusCode]`
+- `in_64(self, session: VISASession, space: constants.AddressSpace, offset: int, extended: bool=False) -> Tuple[int, StatusCode]`
+- `install_handler(self, session: VISASession, event_type: constants.EventType, handler: VISAHandler, user_handle: Any) -> Tuple[VISAHandler, Any, Any, StatusCode]`
+- `list_resources(self, session: VISARMSession, query: str='?*::INSTR') -> Tuple[str, ...]`
+- `lock(self, session: VISASession, lock_type: constants.Lock, timeout: int, requested_key: Optional[str]=None) -> Tuple[str, StatusCode]`
+- `map_address(self, session: VISASession, map_space: constants.AddressSpace, map_base: int, map_size: int, access: Literal[False]=False, suggested: Optional[int]=None) -> Tuple[int, StatusCode]`
+- `map_trigger(self, session: VISASession, trigger_source: constants.InputTriggerLine, trigger_destination: constants.OutputTriggerLine, mode: None=None) -> StatusCode`
+- `memory_allocation(self, session: VISASession, size: int, extended: bool=False) -> Tuple[int, StatusCode]`
+- `memory_free(self, session: VISASession, offset: int, extended: bool=False) -> StatusCode`
+- `move(self, session: VISASession, source_space: constants.AddressSpace, source_offset: int, source_width: constants.DataWidth, destination_space: constants.AddressSpace, destination_offset: int, destination_width: constants.DataWidth, length: int) -> StatusCode`
+- `move_asynchronously(self, session: VISASession, source_space: constants.AddressSpace, source_offset: int, source_width: constants.DataWidth, destination_space: constants.AddressSpace, destination_offset: int, destination_width: constants.DataWidth, length: int) -> Tuple[VISAJobID, StatusCode]`
+- `move_in_8(self, session: VISASession, space: constants.AddressSpace, offset: int, length: int, extended: bool=False) -> Tuple[List[int], StatusCode]`
+- `move_in_16(self, session: VISASession, space: constants.AddressSpace, offset: int, length: int, extended: bool=False) -> Tuple[List[int], StatusCode]`
+- `move_in_32(self, session: VISASession, space: constants.AddressSpace, offset: int, length: int, extended: bool=False) -> Tuple[List]`
+- `move_in_64(self, session: VISASession, space: constants.AddressSpace, offset: int, length: int, extended: bool=False) -> Tuple[List[int], StatusCode]`
+- `move_out_8(self, session: VISASession, space: constants.AddressSpace, offset: int, length: int, data: Iterable[int], extended: bool=False) -> StatusCode`
+- `move_out_16(self, session: VISASession, space: constants.AddressSpace, offset: int, length: int, data: Iterable[int], extended: bool=False) -> StatusCode`
+- `move_out_32(self, session: VISASession, space: constants.AddressSpace, offset: int, length: int, data: Iterable[int], extended: bool=False) -> StatusCode`
+- `move_out_64(self, session: VISASession, space: constants.AddressSpace, offset: int, length: int, data: Iterable[int], extended: bool=False) -> StatusCode`
+- `open(self, session: VISARMSession, resource_name: str, access_mode: constants.AccessModes=constants.AccessModes.no_lock, open_timeout: int=constants.VI_TMO_IMMEDIATE) -> Tuple[VISASession, StatusCode]`
+- `open_default_resource_manager(self) -> Tuple[VISARMSession, StatusCode]`
+- `out_8(self, session: VISASession, space: constants.AddressSpace, offset: int, data: int, extended: bool=False) -> StatusCode`
+- `out_16(self, session: VISASession, space: constants.AddressSpace, offset: int, data: int, extended: bool=False) -> StatusCode`
+- `out_32(self, session: VISASession, space: constants.AddressSpace, offset: int, data: Iterable[int], extended: bool=False) -> StatusCode`
+- `out_64(self, session: VISASession, space: constants.AddressSpace, offset: int, data: Iterable[int], extended: bool=False) -> StatusCode`
+- `parse_resource(self, session: VISARMSession, resource_name: str) -> Tuple[ResourceInfo, StatusCode]`
+- `parse_resource_extended(self, session: VISARMSession, resource_name: str) -> Tuple[ResourceInfo, StatusCode]`
+- `peek_8(self, session: VISASession, address: VISAMemoryAddress) -> Tuple[int, StatusCode]`
+- `peek_16(self, session: VISASession, address: VISAMemoryAddress) -> Tuple[int, StatusCode]`
+- `peek_32(self, session: VISASession, address: VISAMemoryAddress) -> Tuple[int, StatusCode]`
+- `peek_64(self, session: VISASession, address: VISAMemoryAddress) -> Tuple[int, StatusCode]`
+- `poke_8(self, session: VISASession, address: VISAMemoryAddress, data: int) -> StatusCode`
+- `poke_16(self, session: VISASession, address: VISAMemoryAddress, data: int) -> StatusCode`
+- `poke_32(self, session: VISASession, address: VISAMemoryAddress, data: int) -> StatusCode`
+- `poke_64(self, session: VISASession, address: VISAMemoryAddress, data: int) -> StatusCode`
+- `read(self, session: VISASession, count: int) -> Tuple[bytes, StatusCode]`
+- `read_asynchronously(self, session: VISASession, count: int) -> Tuple[SupportsBytes, VISAJobID, StatusCode]`
+- `read_stb(self, session: VISASession) -> Tuple[int, StatusCode]`
+- `read_to_file(self, session: VISASession, filename: str, count: int) -> Tuple[int, StatusCode]`
+- `set_attribute(self, session: VISASession, attribute: constants.ResourceAttribute, attribute_state: Any) -> StatusCode`
+- `set_buffer(self, session: VISASession, mask: constants.BufferType, size: int) -> StatusCode`
+- `status_description(self, session: VISASession, status: StatusCode) -> Tuple[str, StatusCode]`
+- `terminate(self, session: VISASession, degree: None, job_id: VISAJobID) -> StatusCode`
+- `uninstall_handler(self, session: VISASession, event_type: constants.EventType, handler: VISAHandler, user_handle: Any=None) -> StatusCode`
+- `unlock(self, session: VISASession) -> StatusCode`
+- `unmap_address(self, session: VISASession) -> StatusCode`
+- `unmap_trigger(self, session: VISASession, trigger_source: constants.InputTriggerLine, trigger_destination: constants.OutputTriggerLine) -> StatusCode`
+- `usb_control_in(self, session: VISASession, request_type_bitmap_field: int, request_id: int, request_value: int, index: int, length: int=0) -> Tuple[bytes, StatusCode]`
+- `usb_control_out(self, session: VISASession, request_type_bitmap_field: int, request_id: int, request_value: int, index: int, data: bytes=b'') -> StatusCode`
+- `vxi_command_query(self, session: VISASession, mode: constants.VXICommands, command: int) -> Tuple[int, StatusCode]`
+- `wait_on_event(self, session: VISASession, in_event_type: constants.EventType, timeout: int) -> Tuple[constants.EventType, VISAEventContext, StatusCode]`
+- `write(self, session: VISASession, data: bytes) -> Tuple[int, StatusCode]`
+- `write_asynchronously(self, session: VISASession, data: bytes) -> Tuple[VISAJobID, StatusCode]`
+- `write_from_file(self, session: VISASession, filename: str, count: int) -> Tuple[int, StatusCode]`

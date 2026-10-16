@@ -1,0 +1,71 @@
+# pyvisa.resources.VXIInstrument.visa_attributes_classes
+Context: PyVISA pyvisa.resources.VXIInstrument; retain the exact signature, parameter defaults, return/status contract and backend/protocol qualifiers.
+[Source context](../resource-class-apis-api-index.md) / [Owning VISA resource class and backend contract](vxi-instrument.md)
+
+
+
+```text
+visa_attributes_classes: ClassVar[Set[Type[Attribute]]] = {
+    <class 'pyvisa.attributes.AttrVI_ATTR_4882_COMPLIANT'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_CMDR_LA'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_DEST_ACCESS_PRIV'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_DEST_BYTE_ORDER'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_DEST_INCREMENT'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_DMA_ALLOW_EN'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_FDC_CHNL'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_FDC_GEN_SIGNAL_EN'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_FDC_MODE'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_FDC_USE_PAIR'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_FILE_APPEND_EN'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_IMMEDIATE_SERV'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_INTF_INST_NAME'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_INTF_NUM'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_INTF_TYPE'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_IO_PROT'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_MAINFRAME_LA'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_MANF_ID'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_MANF_NAME'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_MAX_QUEUE_LENGTH'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_MEM_BASE'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_MEM_SIZE'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_MEM_SPACE'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_MODEL_CODE'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_MODEL_NAME'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_RD_BUF_OPER_MODE'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_RD_BUF_SIZE'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_RM_SESSION'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_CLASS'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_IMPL_VERSION'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_LOCK_STATE'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_MANF_ID'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_MANF_NAME'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_NAME'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_RSRC_SPEC_VERSION'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_SEND_END_EN'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_SLOT'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_SRC_ACCESS_PRIV'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_SRC_BYTE_ORDER'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_SRC_INCREMENT'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_SUPPRESS_END_EN'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_TERMCHAR'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_TERMCHAR_EN'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_TMO_VALUE'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_TRIG_ID'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_USER_DATA'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_VXI_DEV_CLASS'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_VXI_LA'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_VXI_TRIG_DIR'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_VXI_TRIG_LINES_EN'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_VXI_TRIG_SUPPORT'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_WIN_ACCESS'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_WIN_ACCESS_PRIV'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_WIN_BASE_ADDR'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_WIN_BYTE_ORDER'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_WIN_SIZE'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_WR_BUF_OPER_MODE'>,
+    <class 'pyvisa.attributes.AttrVI_ATTR_WR_BUF_SIZE'>,
+}
+```
+
+VISA attribute descriptor classes expose supported attributes and their valid values for introspection. Commonly used attributes are usually available directly on the resource.
+

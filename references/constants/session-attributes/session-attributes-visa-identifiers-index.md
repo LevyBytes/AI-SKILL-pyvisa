@@ -1,0 +1,61 @@
+# Session, interface and transfer attributes VISA numeric identifiers
+
+Open when locating Session, interface and transfer attributes VISA numeric identifiers methods, values or declarations.
+
+- [pyvisa.constants.VI_ATTR_RSRC_CLASS](../memory-attributes/vi-attr-rsrc-class-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RSRC_CLASS.
+- [pyvisa.constants.VI_ATTR_RSRC_NAME](../memory-attributes/vi-attr-rsrc-name-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RSRC_NAME.
+- [pyvisa.constants.VI_ATTR_RSRC_IMPL_VERSION](../memory-attributes/vi-attr-rsrc-impl-version-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RSRC_IMPL_VERSION.
+- [pyvisa.constants.VI_ATTR_RSRC_LOCK_STATE](../memory-attributes/vi-attr-rsrc-lock-state-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RSRC_LOCK_STATE.
+- [pyvisa.constants.VI_ATTR_MAX_QUEUE_LENGTH](vi-attr-max-queue-length-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_MAX_QUEUE_LENGTH.
+- [pyvisa.constants.VI_ATTR_USER_DATA_32](vi-attr-user-data-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_USER_DATA_32.
+- [pyvisa.constants.VI_ATTR_USER_DATA_64](vi-attr-user-data-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_USER_DATA_64.
+- [pyvisa.constants.VI_ATTR_USER_DATA](vi-attr-user-data-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_USER_DATA.
+- [pyvisa.constants.VI_ATTR_FDC_CHNL](vi-attr-fdc-chnl-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_FDC_CHNL.
+- [pyvisa.constants.VI_ATTR_FDC_MODE](vi-attr-fdc-mode-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_FDC_MODE.
+- [pyvisa.constants.VI_ATTR_FDC_GEN_SIGNAL_EN](vi-attr-fdc-gen-signal-en-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_FDC_GEN_SIGNAL_EN.
+- [pyvisa.constants.VI_ATTR_FDC_USE_PAIR](vi-attr-fdc-use-pair-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_FDC_USE_PAIR.
+- [pyvisa.constants.VI_ATTR_SEND_END_EN](vi-attr-send-end-en-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_SEND_END_EN.
+- [pyvisa.constants.VI_ATTR_TERMCHAR](vi-attr-termchar-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_TERMCHAR.
+- [pyvisa.constants.VI_ATTR_TMO_VALUE](vi-attr-tmo-value-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_TMO_VALUE.
+- [pyvisa.constants.VI_ATTR_IO_PROT](vi-attr-io-prot-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_IO_PROT.
+- [pyvisa.constants.VI_ATTR_DMA_ALLOW_EN](vi-attr-dma-allow-en-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_DMA_ALLOW_EN.
+- [pyvisa.constants.VI_ATTR_RD_BUF_OPER_MODE](vi-attr-rd-buf-oper-mode-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RD_BUF_OPER_MODE.
+- [pyvisa.constants.VI_ATTR_RD_BUF_SIZE](vi-attr-rd-buf-size-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RD_BUF_SIZE.
+- [pyvisa.constants.VI_ATTR_WR_BUF_OPER_MODE](vi-attr-wr-buf-oper-mode-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_WR_BUF_OPER_MODE.
+- [pyvisa.constants.VI_ATTR_WR_BUF_SIZE](vi-attr-wr-buf-size-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_WR_BUF_SIZE.
+- [pyvisa.constants.VI_ATTR_SUPPRESS_END_EN](vi-attr-suppress-end-en-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_SUPPRESS_END_EN.
+- [pyvisa.constants.VI_ATTR_TERMCHAR_EN](vi-attr-termchar-en-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_TERMCHAR_EN.
+- [pyvisa.constants.VI_ATTR_CMDR_LA](vi-attr-cmdr-la-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_CMDR_LA.
+- [pyvisa.constants.VI_ATTR_MAINFRAME_LA](vi-attr-mainframe-la-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_MAINFRAME_LA.
+- [pyvisa.constants.VI_ATTR_MANF_NAME](vi-attr-manf-name-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_MANF_NAME.
+- [pyvisa.constants.VI_ATTR_MODEL_NAME](vi-attr-model-name-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_MODEL_NAME.
+- [pyvisa.constants.VI_ATTR_RM_SESSION](vi-attr-rm-session-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RM_SESSION.
+- [pyvisa.constants.VI_ATTR_MANF_ID](vi-attr-manf-id-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_MANF_ID.
+- [pyvisa.constants.VI_ATTR_MODEL_CODE](vi-attr-model-code-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_MODEL_CODE.
+- [pyvisa.constants.VI_ATTR_SLOT](vi-attr-slot-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_SLOT.
+- [pyvisa.constants.VI_ATTR_INTF_INST_NAME](vi-attr-intf-inst-name-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_INTF_INST_NAME.
+- [pyvisa.constants.VI_ATTR_IMMEDIATE_SERV](vi-attr-immediate-serv-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_IMMEDIATE_SERV.
+- [pyvisa.constants.VI_ATTR_INTF_PARENT_NUM](vi-attr-intf-parent-num-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_INTF_PARENT_NUM.
+- [pyvisa.constants.VI_ATTR_RSRC_SPEC_VERSION](../memory-attributes/vi-attr-rsrc-spec-version-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RSRC_SPEC_VERSION.
+- [pyvisa.constants.VI_ATTR_INTF_TYPE](vi-attr-intf-type-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_INTF_TYPE.
+- [pyvisa.constants.VI_ATTR_RSRC_MANF_NAME](../memory-attributes/vi-attr-rsrc-manf-name-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RSRC_MANF_NAME.
+- [pyvisa.constants.VI_ATTR_RSRC_MANF_ID](../memory-attributes/vi-attr-rsrc-manf-id-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RSRC_MANF_ID.
+- [pyvisa.constants.VI_ATTR_INTF_NUM](vi-attr-intf-num-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_INTF_NUM.
+- [pyvisa.constants.VI_ATTR_DEV_STATUS_BYTE](vi-attr-dev-status-byte-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_DEV_STATUS_BYTE.
+- [pyvisa.constants.VI_ATTR_FILE_APPEND_EN](vi-attr-file-append-en-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_FILE_APPEND_EN.
+- [pyvisa.constants.VI_ATTR_4882_COMPLIANT](vi-attr-4882-compliant-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_4882_COMPLIANT.
+- [pyvisa.constants.VI_ATTR_JOB_ID](vi-attr-job-id-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_JOB_ID.
+- [pyvisa.constants.VI_ATTR_EVENT_TYPE](vi-attr-event-type-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_EVENT_TYPE.
+- [pyvisa.constants.VI_ATTR_SIGP_STATUS_ID](vi-attr-sigp-status-id-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_SIGP_STATUS_ID.
+- [pyvisa.constants.VI_ATTR_RECV_TRIG_ID](vi-attr-recv-trig-id-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RECV_TRIG_ID.
+- [pyvisa.constants.VI_ATTR_INTR_STATUS_ID](vi-attr-intr-status-id-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_INTR_STATUS_ID.
+- [pyvisa.constants.VI_ATTR_STATUS](vi-attr-status-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_STATUS.
+- [pyvisa.constants.VI_ATTR_RET_COUNT_32](vi-attr-ret-count-32-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RET_COUNT_32.
+- [pyvisa.constants.VI_ATTR_RET_COUNT_64](vi-attr-ret-count-64-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RET_COUNT_64.
+- [pyvisa.constants.VI_ATTR_RET_COUNT](vi-attr-ret-count-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RET_COUNT.
+- [pyvisa.constants.VI_ATTR_BUFFER](vi-attr-buffer-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_BUFFER.
+- [pyvisa.constants.VI_ATTR_RECV_INTR_LEVEL](vi-attr-recv-intr-level-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RECV_INTR_LEVEL.
+- [pyvisa.constants.VI_ATTR_OPER_NAME](vi-attr-oper-name-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_OPER_NAME.
+- [pyvisa.constants.VI_ATTR_RECV_TCPIP_ADDR](../tcpip-attributes/vi-attr-recv-tcpip-addr-implementation.md) — Open when checking pyvisa.constants.VI_ATTR_RECV_TCPIP_ADDR.
+
+[Reference Language Selection](../../languages.md) — Open when you need a language version of this skill's references other than English.

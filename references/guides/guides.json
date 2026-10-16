@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "topics": [
+    {
+      "topic": "Instrument control overview",
+      "file": "references/guides/instrument-control-overview-index.md",
+      "summary": "Open when checking PyVISA capabilities and its instrument-control overview.",
+      "keywords": []
+    },
+    {
+      "topic": "Events and visa shell",
+      "file": "references/guides/events-and-visa-shell-index.md",
+      "summary": "Open when using PyVISA event queues/handlers, VISA shell commands, backend selection and diagnostic information.",
+      "keywords": []
+    },
+    {
+      "topic": "Installation and resource configuration",
+      "file": "references/guides/installation-and-resource-configuration-index.md",
+      "summary": "Open when configuring resource sessions, timeouts, chunks, terminations, VISA attributes, installation and instrument communication.",
+      "keywords": []
+    },
+    {
+      "topic": "Addresses data and backends",
+      "file": "references/guides/addresses-data-and-backends-index.md",
+      "summary": "Open when parsing VISA resource names, transferring ASCII/binary values, configuring backends or following the complex instrument example.",
+      "keywords": []
+    },
+    {
+      "topic": "Backend development",
+      "file": "references/guides/backend-development-index.md",
+      "summary": "Open when understanding VISA layers, calling low-level functions, testing backends or implementing a new VISA backend.",
+      "keywords": []
+    },
+    {
+      "topic": "Troubleshooting and legacy migration",
+      "file": "references/guides/troubleshooting-and-legacy-migration-index.md",
+      "summary": "Open when troubleshooting PyVISA/NI-VISA installation, architecture, libraries and system errors or migrating pre-1.5 APIs.",
+      "keywords": []
+    },
+    {
+      "topic": "Source module navigation",
+      "file": "references/guides/source-module-navigation-index.md",
+      "summary": "Open when locating bundled PyVISA implementation modules.",
+      "keywords": []
+    },
+    {
+      "topic": "Reference Language Selection",
+      "file": "references/languages.md",
+      "summary": "Open when you need a language version of this skill's references other than English.",
+      "keywords": [
+        "reference language",
+        "translated references",
+        "language selection"
+      ]
+    }
+  ]
+}

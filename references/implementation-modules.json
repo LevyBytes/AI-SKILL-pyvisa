@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "topics": [
+    {
+      "topic": "pyvisa.constants implementation",
+      "file": "references/constants/constants-enumerations-implementation-index.md",
+      "summary": "Open when inspecting the pyvisa.constants implementation declarations, dependencies and source limitations.",
+      "keywords": []
+    },
+    {
+      "topic": "pyvisa.highlevel implementation",
+      "file": "references/backends/highlevel-implementation-index.md",
+      "summary": "Open when inspecting the pyvisa.highlevel implementation declarations, dependencies and source limitations.",
+      "keywords": []
+    },
+    {
+      "topic": "pyvisa.resources.messagebased implementation",
+      "file": "references/resources/message-based-resource/messagebased-implementation-index.md",
+      "summary": "Open when inspecting the pyvisa.resources.messagebased implementation declarations, dependencies and source limitations.",
+      "keywords": []
+    },
+    {
+      "topic": "pyvisa.resources.resource implementation",
+      "file": "references/resources/base-resource/resource-implementation-index.md",
+      "summary": "Open when inspecting the pyvisa.resources.resource implementation declarations, dependencies and source limitations.",
+      "keywords": []
+    },
+    {
+      "topic": "pyvisa.resources.registerbased implementation",
+      "file": "references/resources/register-based-resource/registerbased-implementation-index.md",
+      "summary": "Open when inspecting the pyvisa.resources.registerbased implementation declarations, dependencies and source limitations.",
+      "keywords": []
+    },
+    {
+      "topic": "pyvisa.resources.tcpip implementation",
+      "file": "references/resources/tcpip/tcpip-implementation-index.md",
+      "summary": "Open when inspecting the pyvisa.resources.tcpip implementation declarations, dependencies and source limitations.",
+      "keywords": []
+    },
+    {
+      "topic": "pyvisa.resources.firewire implementation",
+      "file": "references/resources/firewire/firewire-implementation-index.md",
+      "summary": "Open when inspecting the pyvisa.resources.firewire implementation declarations, dependencies and source limitations.",
+      "keywords": []
+    },
+    {
+      "topic": "pyvisa.resources.gpib implementation",
+      "file": "references/resources/gpib/gpib-implementation-index.md",
+      "summary": "Open when inspecting the pyvisa.resources.gpib implementation declarations, dependencies and source limitations.",
+      "keywords": []
+    },
+    {
+      "topic": "pyvisa.resources.pxi implementation",
+      "file": "references/resources/pxi/pxi-implementation-index.md",
+      "summary": "Open when inspecting the pyvisa.resources.pxi implementation declarations, dependencies and source limitations.",
+      "keywords": []
+    },
+    {
+      "topic": "pyvisa.resources.usb implementation",
+      "file": "references/resources/usb/usb-implementation-index.md",
+      "summary": "Open when inspecting the pyvisa.resources.usb implementation declarations, dependencies and source limitations.",
+      "keywords": []
+    },
+    {
+      "topic": "pyvisa.resources.vxi implementation",
+      "file": "references/resources/vxi/vxi-implementation-index.md",
+      "summary": "Open when inspecting the pyvisa.resources.vxi implementation declarations, dependencies and source limitations.",
+      "keywords": []
+    },
+    {
+      "topic": "pyvisa.resources.serial implementation",
+      "file": "references/resources/serial/serial-implementation-index.md",
+      "summary": "Open when inspecting the pyvisa.resources.serial implementation declarations, dependencies and source limitations.",
+      "keywords": []
+    },
+    {
+      "topic": "Reference Language Selection",
+      "file": "references/languages.md",
+      "summary": "Open when you need a language version of this skill's references other than English.",
+      "keywords": [
+        "reference language",
+        "translated references",
+        "language selection"
+      ]
+    }
+  ]
+}

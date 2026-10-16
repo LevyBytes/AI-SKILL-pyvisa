@@ -1,0 +1,14 @@
+# pyvisa.resources.USBRaw.query_delay
+Context: PyVISA pyvisa.resources.USBRaw; retain the exact signature, parameter defaults, return/status contract and backend/protocol qualifiers.
+[Source context](../resource-class-apis-api-index.md) / [Owning VISA resource class and backend contract](usb-raw.md)
+
+```text
+query_delay: float = 0.0
+```
+
+Type and source details:
+
+- [float](https://docs.python.org/3/library/functions.html#float)
+
+Seconds to sleep between the write and read phases of a query.
+
