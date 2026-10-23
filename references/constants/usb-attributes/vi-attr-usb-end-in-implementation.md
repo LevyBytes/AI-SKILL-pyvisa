@@ -7,4 +7,4 @@ Implementation excerpt: read with the linked module imports and owning class. Th
 VI_ATTR_USB_END_IN           = _to_int(0x3FFF01A9)
 ```
 
-[Source license and checked revision](../../pyvisa-source-license.md).
+[Source at the checked PyVISA revision](https://github.com/pyvisa/pyvisa/tree/843d62a50cac9a23e7585c5135f3fd5eb9470f17).

@@ -9,4 +9,4 @@ Implementation excerpt: read with the linked module imports and owning class. Th
     error_trigger_not_mapped = VI_ERROR_TRIG_NMAPPED
 ```
 
-[Source license and checked revision](../../../pyvisa-source-license.md).
+[Source at the checked PyVISA revision](https://github.com/pyvisa/pyvisa/tree/843d62a50cac9a23e7585c5135f3fd5eb9470f17).

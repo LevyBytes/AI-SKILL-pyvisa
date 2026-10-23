@@ -12,4 +12,4 @@ class ByteOrder(enum.IntEnum):
     little_endian = VI_LITTLE_ENDIAN
 ```
 
-[Source license and checked revision](../../pyvisa-source-license.md).
+[Source at the checked PyVISA revision](https://github.com/pyvisa/pyvisa/tree/843d62a50cac9a23e7585c5135f3fd5eb9470f17).

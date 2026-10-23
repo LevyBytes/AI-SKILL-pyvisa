@@ -35,4 +35,4 @@ class AddressSpace(enum.IntEnum):
     pxi_allocated = VI_PXI_ALLOC_SPACE
 ```
 
-[Source license and checked revision](../../pyvisa-source-license.md).
+[Source at the checked PyVISA revision](https://github.com/pyvisa/pyvisa/tree/843d62a50cac9a23e7585c5135f3fd5eb9470f17).

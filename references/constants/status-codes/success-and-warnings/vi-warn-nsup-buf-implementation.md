@@ -9,4 +9,4 @@ VI_WARN_NSUP_BUF             = _to_int(0x3FFF0088)
 # The following one is a non-standard NI extension
 ```
 
-[Source license and checked revision](../../../pyvisa-source-license.md).
+[Source at the checked PyVISA revision](https://github.com/pyvisa/pyvisa/tree/843d62a50cac9a23e7585c5135f3fd5eb9470f17).
